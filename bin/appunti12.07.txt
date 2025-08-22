@@ -1,0 +1,37 @@
+Lezione del 12.07
+
+Le componenti di base che compongono gli hop: incapsulamento, ereditarietà e polimorfismo.
+
+EREDITARIETA: derivare una classe da un altra. (Riutilizzo delle classi).
+Polimorfismo: proteggere lo stato interno di una classe e usare metodi per esporlo o no.
+
+L’ereditarietà è un modo per riusare le classi. La nuova classe è figlia della superasse.
+L’ereditarietà ha una rappresentazione genetica delle classi, che ne eredita attributi, costruttori e metodi.
+La classe padre = superclasse;
+La classe figlia = sottoclasse.
+
+Devo riflettere sul qualcosa in comune tra le varie classi, mettendo i fattori comuni nella superasse, in modo da riusare
+il codice senza ripeterlo.
+
+ Un film è un contenuto...
+ Una serie è un contenuto...
+
+ Per derivare una classe da un altra si usa la kw EXTENDS.
+ Per verificare che film sia un tipo di contenuto.... App.java:4
+
+ Regole:
+ - EXTENDS
+ - non si può estendere da più classi contemporaneamente
+ - quando non hanno extends, in realtà sono sottoclassi di OBJECT (che è il padre di tutte le classi).
+ Il padre non sa quali sono i figli, l'ereditarietà è dal figlio verso il padre e non viceversa.
+
+ LIVELLI DI ACCESSO:
+ -> protected è particolare: se io metto il titolo protected, dato che contenuto, film e serie sono in package diversi,
+ da app non posso vedere titolo, perchè è al di fuori dei package.... ma da serie lo vedo. Contenuto.java:28
+ -> se è public lo vedo anche fuori dal package
+ ->private non può essere visto dalla sottoclasse ma solo dalla classe
+
+ Anche se una superclasse ha un attributo privato, non lo vede, ma sa che c'è. Noi non possiamo cambiare il colore 
+ degli occhi, però ce li abbiamo, ereditati dai genitori. Stesso discorso per i protected.
+
+ 
