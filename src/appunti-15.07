@@ -1,0 +1,44 @@
+15/07
+Java oop composizione
+Recap:
+Incapsulamento: Che cos’è? La capacita di tenere privati metodi e attributi ed esporli in lettura o scrittura mediante metodi specifici ,
+ossia getter e setter. In alcuni casi con strutture non primarie il getter potrebbe rompere l’incapsulamento, ma con metodi aggiuntivi 
+(aggiungi elemento/ rimuovi elemento).
+Se tu vuoi mantenere lo stato interno protetto, sei tu che permetto la lettura o modifica dello stato esterno in base a ciò che hai o che vuoi far fare.
+Ereditarietà: capacità di una classe secondaria di ereditare attributi e metodi della classe principale, dichiarando di esserne figlia mediante kw extends.
+
+————————————Ripasso livelli di accesso:
+Servono per impostare livelli di accesso e visibilità degli attributi e metodi all’interno di una classe.
+
+—————————————
+Composizione - non fa strettamente parte degli oop ma del riuso del codice.
+Riuso del cidice ->  utile ereditarietà.
+Troppo riuso: è come usare un bazzuca per uccidere una mosca.
+Se fai copia e incolla : “copipasta -> spaghetti code”
+Riuso significa creare una classe nuova che si serve di metodi già esistenti.
+
+Ogni classe può essere componente di un altra.(Stringhe, Array…)
+Si usano varie piccole classi per comporre una classe più complessa.
+
+Relazione di tipo “ha-un” tra le classi.
+
+——————
+POLIMORFISMO: 3 pilastro : stesso nome, cose diverse.
+La classe secondaria si può riferire alla propria superasse con la kw “super” per invocare il metodo.
+Super.riproduci(); -> prende l’implementazione del metodo riproduci () della superasse.
+Polimorfismo: ho più metodi che si chiamano allo stesso modo ma con forme diverse.
+@Override : scelgo di avere un’altra implementazione del metodo e di usare quella che dico io.
+L’override è un annotation di java, con lo scopo di segnalare che si sta facendo override del metodo.(evita errori di misthiping / grammaticale)
+
+Se la surclassa ha un costruttore esplicito, la sottoclasse DEVE implementarlo.
+
+Cosa succede quando distanzio una nuova istanza? Tipo ad app faccio Film f1 = new Film();
+Il “new film” dove va? Cosa succede? Fase di inizializzazione:
+1. Allocazione di memoria
+2. Zero-initialization
+Che step esegue quando creo una nuova istanza.
+Viene allocata una nuova cella di memoria di Film, chiama il costruttore della classe, trattandosi di una classe che ne eredita un altra, viene chiamato 
+prima il costruttore della superclasse e poi quello della sottoclasse.
+
+Dato un costruttore esplicito della superlcasse, io devo per forza implementarlo nella sottoclasse, ma potrei anche dare solo valori di defoult,
+perchè java non sa il ragionamento che abbiamo fatto dietro, gli importa solo della forma.

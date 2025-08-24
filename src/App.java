@@ -17,7 +17,7 @@ public class App {
         f1.aggiungiAttore("Bill Paxton");
         f1.stampaAttori();
 
-        // f1.getAttori()[0] = "io";
+        // f1.getAttori()[0] = "io"; --->MOLTO IMPORTANTE
         f1.stampaAttori();
         /*Così facendo ho rotto l'incapsulamento....ho sovrascritto l'attore a posizione 0...
         --> anche il getter può essere pericoloso. Allora questo stampaAttori che si trova in film, lo metto dentro contenuto

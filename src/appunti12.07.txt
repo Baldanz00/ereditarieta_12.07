@@ -34,4 +34,10 @@ il codice senza ripeterlo.
  Anche se una superclasse ha un attributo privato, non lo vede, ma sa che c'è. Noi non possiamo cambiare il colore 
  degli occhi, però ce li abbiamo, ereditati dai genitori. Stesso discorso per i protected.
 
- 
+ ATTENZIONE:
+ usare il GET per un tipo non primitivo, dato che ti da il riferimento all'intera struttura, e quindi l'accesso al dato, 
+ bisogna fare attenzione perchè potrebbero modificarli.
+ Diverso è per i tipi primitivi, perchè al massimo ti torna un valore.... per i non primitivi è un pò più grave e creare 
+ posizioni che no esistono, come aggiungere elementi a posizioni che non esistono.
+ Si rompe l'incapsulamento.
+ Esiste un pattern di Java per proteggere gli oggetti: Unmodifiable......
